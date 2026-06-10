@@ -6,8 +6,8 @@ WITH CTE AS
     {{ ref('trip_fact') }} t 
     LEFT JOIN {{ ref('daily_weather') }} w 
         on t.trip_date = w.daily_weather
- ORDER BY 
-    TRIP_DATE DESC
+ ORDER BY  
+    trip_date DESC
  )
  SELECT 
     * 

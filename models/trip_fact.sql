@@ -11,7 +11,7 @@ TIMESTAMPDIFF(SECOND,TO_TIMESTAMP(STARTED_AT),TO_TIMESTAMP(ENDED_AT)) AS TRIP_DU
 
 from {{ ref('stg_bike') }}
 
-where RIDE_ID != '"bikeid"' and RIDE_ID != 'bikeid'
+where RIDE_ID != '"bikeid"' and RIDE_ID != 'bikeid' and STARTED_AT != 'started_at'
 
 
 
